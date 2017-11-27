@@ -26,3 +26,10 @@ html.network img {
 .reveal a:hover img.no-shadow {
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.25);
 }
+
+.container {
+	display: flex;
+}
+.col {
+	flex: 1;
+}

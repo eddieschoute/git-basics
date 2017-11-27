@@ -1,1 +1,1 @@
-# [git-basics](http://eddieschoute.github.com/git-basics)
+# [git-basics](http://eddieschoute.github.io/git-basics)

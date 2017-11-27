@@ -36,10 +36,7 @@
 					</section>
 					<section id="section" class="slide level2">
 						<p class="center">
-						<br>
-						<img src="http://www.phdcomics.com/comics/archive/phd101212s.gif" style="max-height: 15em">
-						<br>
-						<a href="http://www.phdcomics.com/comics/archive/phd101212s.gif" data-preview-link>Link</a>
+							<img src="http://www.phdcomics.com/comics/archive/phd101212s.gif" style="max-height: 15em">
 						</p>
 						<aside class="notes">
 							If you've ever worked on a paper using Word, you've probably created a verison control system that works for you by saving a file with different "version" tags.
@@ -150,121 +147,6 @@
 				</section>
 
 				<section data-transition="slide">
-					<section id="so-really-what-is-git" class="titleslide slide level1" data-transition="slide">
-						<h1>git functions</h1>
-					</section>
-					<section>
-						<code>
-							<pre style="top: 25%; font-size: .2em; width: 100%">
-git help --all
-usage: git [--version] [--help] [-C <path>] [-c name=value]
-		   [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]
-		   [-p|--paginate|--no-pager] [--no-replace-objects] [--bare]
-		   [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]
-		   <command> [<args>]
-
-available git commands in '/Applications/Xcode.app/Contents/Developer/usr/libexec/git-core'
-
-  add						clone					  fast-import				interpret-trailers		  notes						remote-testsvn			  submodule
-  add--interactive			column					  fetch						log						  p4						repack					  subtree
-  am						commit					  fetch-pack				ls-files				  pack-objects				replace					  svn
-  annotate					commit-tree				  filter-branch				ls-remote				  pack-redundant			request-pull			  symbolic-ref
-  apply						config					  fmt-merge-msg				ls-tree					  pack-refs					rerere					  tag
-  archimport				count-objects			  for-each-ref				mailinfo				  patch-id					reset					  unpack-file
-  archive					credential				  format-patch				mailsplit				  prune						rev-list				  unpack-objects
-  bisect					credential-cache		  fsck						merge					  prune-packed				rev-parse				  update-index
-  bisect--helper			credential-cache--daemon  fsck-objects				merge-base				  pull						revert					  update-ref
-  blame						credential-osxkeychain	  gc						merge-file				  push						rm						  update-server-info
-  branch					credential-store		  get-tar-commit-id			merge-index				  quiltimport				send-email				  upload-archive
-  bundle					cvsexportcommit			  grep						merge-octopus			  read-tree					send-pack				  upload-pack
-  cat-file					cvsimport				  gui--askpass				merge-one-file			  rebase					sh-i18n--envsubst		  var
-  check-attr				cvsserver				  hash-object				merge-ours				  receive-pack				shell					  verify-commit
-  check-ignore				daemon					  help						merge-recursive			  reflog					shortlog				  verify-pack
-  check-mailmap				describe				  http-backend				merge-resolve			  relink					show					  verify-tag
-  check-ref-format			diff					  http-fetch				merge-subtree			  remote					show-branch				  web--browse
-  checkout					diff-files				  http-push					merge-tree				  remote-ext				show-index				  whatchanged
-  checkout-index			diff-index				  imap-send					mergetool				  remote-fd					show-ref				  write-tree
-  cherry					diff-tree				  index-pack				mktag					  remote-ftp				stage
-  cherry-pick				difftool				  init						mktree					  remote-ftps				stash
-  citool					difftool--helper		  init-db					mv						  remote-http				status
-  clean						fast-export				  instaweb					name-rev				  remote-https				stripspace
-
-git commands available from elsewhere on your $PATH
-
-  loglive
-
-'git help -a' and 'git help -g' list available subcommands and some
-concept guides. See 'git help <command>' or 'git help <concept>'
-to read about a specific subcommand or concept.
-							</pre>
-						</code>
-						<aside class="notes">
-							So we know that git history is a graph, right? And 
-							This graph that we created has to be stored somewhere, right? 
-							This graph is stored in a .git folder 
-							Every folder on your computer that has a .git folder is git repository.
-							There is only one such .git folder in a git repo.
-							all git commit does, is add content to that .git folder.
-							and git commit is only just one function that git provides
-							what if you wanted to do more, like manipulate an existing snapshot, delete a set of changes, reorder your history. 
-							git offers you other tools to do that.
-							git is essentially a toolkit that contains a bunch of functions that help organize snapshots of content. 
-							This is a list of all the functions available to you.
-							Note - git is not github. what is github? github stores git repository in the internet and that's basically all it does
-							So, as I was saying this is the list of functions
-						</aside>
-					</section>
-					<section>
-						<code>
-							<pre style="top: -25%; font-size: .2em; width: 100%">
-git help --all
-usage: git [--version] [--help] [-C <path>] [-c name=value]
-		   [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]
-		   [-p|--paginate|--no-pager] [--no-replace-objects] [--bare]
-		   [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]
-		   <command> [<args>]
-
-available git commands in '/Applications/Xcode.app/Contents/Developer/usr/libexec/git-core'
-
-  add						clone																															  submodule
-  add--interactive									  fetch						log
-  am						commit
-  annotate
-  apply																																						  tag
-																																	reset
-  archive											  format-patch
-  bisect																		merge
-  bisect--helper																						  pull						revert
-  blame												  gc												  push						rm
-  branch
-													  grep
-													  gui--askpass										  rebase
-
-							daemon					  help												  reflog
-
-							diff																		  remote
-  checkout
-
-
-  cherry-pick										  init																			stash
-																				mv													status
-  clean												  instaweb
-
-git commands available from elsewhere on your $PATH
-
-  loglive
-
-'git help -a' and 'git help -g' list available subcommands and some
-concept guides. See 'git help <command>' or 'git help <concept>'
-to read about a specific subcommand or concept.
-							</pre>
-						</code>
-						<aside class="notes">
-							But you don't have to use every one of the functions available. I've only every had to use a handful.
- 							because Git was initially a toolkit for a VCS rather than a full user-friendly VCS, it has a bunch of verbs that do low-level work and were designed to be chained together UNIX style or called from scripts. These commands are generally referred to as “plumbing” commands, and the more user-friendly commands are called “porcelain” commands.
- 							https://git-scm.com/book/en/v2/Git-Internals-Plumbing-and-Porcelain
-						</aside>
-					</section>
 					<section>
 						<h3>Workflow</h3>
 						<div style="text-align: center; width: 100%; display: inline-block" class="fragment" data-fragment-index="1"><code></code></div>
@@ -298,22 +180,6 @@ to read about a specific subcommand or concept.
 							And to actually save this snapshot you can use git commit
 						</aside>
 					</section>
-					<section>
-						<p class="center">
-						<img src="img/local.png"  style="max-height: 15em;"  alt="git operations">
-						<br>
-						<a href="https://github.com/schacon/git-presentations" data-preview-link>Link</a>
-						</p>
-						<aside class="notes"> 
-							Here is another way to look at this
-							The most important takeaway here is that you use git add to create what you want your next snapshot to look like. 
-							The working directory is the files in your folder.
-							You make changes to your working directory and git add them to the staging area. 
-							you can add multiple files
-							Next, you commit the staged files into a git repository
-							git commit updates the .git folder and thereby updating the graph
-						</aside>
-					</section>
 
 					<section data-background-video="https://github.com/kdheepak89/think-git/blob/gh-pages/img/git-tree.mov?raw=true" data-background-color="#000000">
 						<div class="fragment hide-on-current-fragment" style="background-color: rgba(0, 0, 0, 0.75); color: #fff; padding: 20px;">
@@ -331,33 +197,7 @@ to read about a specific subcommand or concept.
 							git does calculate a diff though, only when it needs to push. Again, this can be set manually. You can say - take longer than you usually do, but make me the smallest patch you can. 
 						</aside>
 					</section>
-					<section class="slide level2">
-						<p class="center">
-						<img src="img/commit-1.svg"  style="max-height: 15em;"	alt="commit structure">
-						<br>
-						<a href="https://github.com/schacon/git-presentations" data-preview-link>Link</a>
-						</p>
-						<aside class="notes">
-							This is the structure of a single commit/snapshot. snapshot (unofficial)==commit(git internal object).
-							Tree is like a directory and can link to other trees or blobs. blobs are like files.
-						</aside>
-					</section>
-					<section class="slide level2">
-						<p class="center">
-						<img src="img/commit-2.svg"  style="max-height: 15em;"	alt="commit structure">
-						<br>
-						<a href="https://git-scm.com/blog/2011/07/11/reset.html" data-preview-link>Link</a>
-						</p>
-						<aside class="notes">
-							If the bottom file was modified, and committed to the repository in a new snapshot, git will still use the same blobs for unmodified files
-							There are other things going on here, like the tag which is just a label. Every branch name is just a label too and we'll touch on that later. Now for a quick demo
-						</aside>
-					</section>
-					<section data-background-video="https://github.com/kdheepak89/think-git/blob/gh-pages/img/git-demo.mov?raw=true" data-background-color="#000000">
-						<div class="fragment hide-on-current-fragment" style="background-color: rgba(0, 0, 0, 0.75); color: #fff; padding: 20px;">
-							<h3 style="color: white;">demo</h3>
-						</div>
-					</section>
+
 					<section>
 						<h1>Big idea #2</h1>
 						Difference between Head, Index and Working directory
@@ -424,37 +264,6 @@ to read about a specific subcommand or concept.
 						<h1>Big idea #3</h1>
 						branches are just labels
 					</section>
-				</section>
-
-				<section data-transition="slide">
-					<section data-transition="slide">
-						<h1>Merge Conflict</h1>
-					</section>
-
-					<section data-background-video="https://github.com/kdheepak89/think-git/blob/gh-pages/img/git-mergetool.mov?raw=true" data-background-color="#000000">
-						<div class="fragment hide-on-current-fragment" style="background-color: rgba(0, 0, 0, 0.75); color: #fff; padding: 20px;">
-							<h3 style="color: white;">demo</h3>
-						</div>
-						<aside class="notes">
-							demo showing git mergetool
-						</aside>
-					</section>
-
-					<section>
-						<h3>Best Mergetools</h3>
-						<br>
-						<a href="http://stackoverflow.com/questions/572237/whats-the-best-three-way-merge-tool" data-preview-link>Link</a>
-						<aside class="notes">
-							There are mergetools out there other than vim, kdiff3 is open source and free on all platforms. p4merge is great.
-						</aside>
-					</section>
-
-				</section>
-
-				<section data-transition="slide">
-					<section data-transition="slide">
-						<h1>Changing history</h1>
-					</section>
 					<section data-state="demo5-event" data-transition="none">
 						<h3><code>git rebase master</code></h3>
 						<div class="fragment demo5-start" style="margin: 50px 0px;">
@@ -469,48 +278,14 @@ to read about a specific subcommand or concept.
 							<svg id="demo5-chart"></svg>
 						</div>
 					</section>
-					<section data-background-video="https://github.com/kdheepak89/think-git/blob/gh-pages/img/git-rebase.mov?raw=true" data-background-color="#000000">
-						<div class="fragment hide-on-current-fragment" style="background-color: rgba(0, 0, 0, 0.75); color: #fff; padding: 20px;">
-							<h3 style="color: white;">demo</h3>
-						</div>
-						<aside class="notes">
-							demo showing git rebase
-						</aside>
-					</section>
-					<section data-background-video="https://github.com/kdheepak89/think-git/blob/gh-pages/img/git-rebase-interactive.mov?raw=true" data-background-color="#000000">
-						<div class="fragment hide-on-current-fragment" style="background-color: rgba(0, 0, 0, 0.75); color: #fff; padding: 20px;">
-							<h3 style="color: white;">demo</h3>
-						</div>
-						<aside class="notes">
-							demo showing git rebase interactive
-						</aside>
-					</section>
-					<section>
-						<h1>Big idea #4</h1>
-						Local commits are yours to do with what you like
-					</section>
 				</section>
 
 				<section data-transition="slide">
 					<section><h1>Remote</h1></section>
 					<section>
-						<p class="center">
-						<img src="img/local-remote.svg"  style="max-height: 15em;"	alt="git operations">
-						<br>
-						<a href="https://github.com/schacon/git-presentations" data-preview-link>Link</a>
-						</p>
+						<img src="img/fetchpull.png" style="max-height: 15em;" alt="git operations">
+						<code>git pull = git fetch + git merge</code>
 						<aside class="notes">Everything we've seen so far has been local. </aside>
-					</section>
-					<section data-state="demo5-event" data-transition="none">
-						<h3><code>git pull = git fetch + git merge</code></h3>
-					</section>
-					<section data-background-video="" data-background-color="#000000">
-						<div class="fragment hide-on-current-fragment" style="background-color: rgba(0, 0, 0, 0.75); color: #fff; padding: 20px;">
-							<h3 style="color: white;">demo</h3>
-						</div>
-						<aside class="notes">
-							demo showing git fetch
-						</aside>
 					</section>
 					<section>
 						<h1>Big idea #5</h1>
@@ -519,6 +294,82 @@ to read about a specific subcommand or concept.
 
 				</section>
 
+				<section data-transition="slide">
+					<section data-transition="slide">
+						<h1>Merge Conflict</h1>
+					</section>
+
+					<section data-transition="slide">
+						Merges don't always go smoothly.
+						<br />
+						If git cannot figure out what to do: Merge conflict!
+					</section>
+
+					<section>
+						<div class="container">
+							<div class="col">
+								Remote <code>animals.md</code>:
+								<pre><code data-trim>
+								# Favorite animal
+								Horse
+								Dolphin
+								</pre></code>
+							</div>
+							<div class="col">
+								Local <code>animals.md</code>:
+								<pre><code data-trim>
+								# Favorite animal
+								Horse
+								Chicken
+								</pre></code>
+							</div>
+						</div>
+						<code>git pull</code> gives a merge conflict!
+						<br />
+						<code>git status</code>:
+						<pre><code data-trim>
+						On branch master
+						You have unmerged paths.
+  					  	  (fix conflicts and run "git commit")
+  					  	  (use "git merge --abort" to abort the merge)
+
+						Unmerged paths:
+  					  	  (use "git add &lt;file&gt;..." to mark resolution)
+
+							both modified:   animals.md
+
+						no changes added to commit (use "git add" and/or "git commit -a")
+						</pre></code>
+					</section>
+
+
+					<section data-transition="slide">
+						<span>
+							<code>animals.md</code>:
+							<pre><code data-trim>
+							# Favorite Animal
+							Horse
+							&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD
+							Dolphin
+							=======
+							Chicken
+							&gt;&gt;&gt;&gt;&gt;&gt;&gt; branch1
+							</pre></code>
+						</span>
+						<span class="fragment">
+							Use your editor and fix manually:
+							<pre><code data-trim>
+							# Favorite Animal
+							Horse
+							Dolphin
+							Chicken
+							</pre></code>
+							Then <div style="text-align: center; width: 70%; display: inline-block"><code style="background-color: black; color: white; border-radius: 5em; padding: .25em" >git add animals.md</code></div>
+
+							and <span style="text-align: center; width: 45%; display: inline-block" ><code style="background-color: black; color: white; border-radius: 5em; padding: .25em" >git commit</code></span >
+						</span>
+					</section>
+				</section>
 
 				<section data-transition="slide">
 					<section data-transition="slide">
