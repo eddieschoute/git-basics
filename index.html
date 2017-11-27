@@ -1,23 +1,22 @@
 <!doctype html>
 <html lang="en">
-
 	<head>
 		<meta charset="utf-8">
 		<link rel="stylesheet" href="reveal.js/css/reveal.css">
-		<link rel="stylesheet" href="reveal.js/css/theme/white.css">
+		<link rel="stylesheet" href="reveal.js/css/theme/simple.css">
 		<link rel="stylesheet" href="css/custom.css">
 		<!-- d3.js -->
-		<script src='http://d3js.org/d3.v3.min.js'></script>
+		<script src='https://d3js.org/d3.v3.min.js'></script>
 		<!-- gitgraph.js -->
 		<script src="js/gitgraph.js"></script>
-		<title>Git Basics</title>
+		<title>git basics</title>
 	</head>
 
 	<body>
 		<div class="reveal">
 			<div class="slides">
 				<section data-state="title-event"  data-transition="slide">
-				  	<h1 class="title">think git</h1>
+				  	<h1 class="title">git basics</h1>
 					<div id="divchart">
 						<svg id="title-chart"></svg>
 					</div>
@@ -27,7 +26,7 @@
 				</section>
 
 				<section data-transition="slide">
-					<section id="what-is-git" class="titleslide slide level1" data-transition="slide"><h1>What is git?</h1>
+					<section id="what-is-git" class="titleslide slide level1" data-transition="slide"><h1>Why git?</h1>
 						<aside class="notes">
 							Most you have have probably heard of git, but if you haven't -
 							git is a version control tool. 
@@ -50,21 +49,6 @@
 							It is likely that multiple people will work on the same file sometimes even at the same time.
 							Even small software projects can have tens of files in multiple folders. 
 							Additionally, developers frequently experiment with features and this should never affect the "master" copy of the project
-						</aside>
-					</section>
-					<section id="section" class="slide level2">
-						<p class="center">
-						<br>
-						<img src="http://imgs.xkcd.com/comics/git.png" style="max-height: 15em">
-						<br>
-						<a href="http://imgs.xkcd.com/comics/git.png" data-preview-link>Link</a>
-						</p>
-						<aside class="notes">
-							git to the rescue! Essentially what git can be is this, it can be a history of all changes you have made to every file in the project. 
-							But, unfortunately you have to understand how it works to use it effectively.
-							Most people when introduced to git, are thrown into using it, and usually don't understand how it works. When something you have never encountered before occurs, you might not know what to do. 
-							I know I've deleted projects and downloaded a fresh copy of a repo because I accidentally created a conflict of some sort. 
-							With this talk, I'd like to introduce what I'm calling the big ideas of git that will help you understand how git works.
 						</aside>
 					</section>
 					<section>
