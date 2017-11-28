@@ -15,7 +15,7 @@
 	<body>
 		<div class="reveal">
 			<div class="slides">
-				<section data-state="title-event"  data-transition="slide">
+				<section class="center" data-state="title-event"  data-transition="slide">
 				  	<h1 class="title">git basics</h1>
 					<div id="divchart">
 						<svg id="title-chart"></svg>
@@ -26,7 +26,7 @@
 				</section>
 
 				<section data-transition="slide">
-					<section id="what-is-git" class="titleslide slide level1" data-transition="slide"><h1>Why git?</h1>
+					<section id="what-is-git" class="center titleslide slide level1" data-transition="slide"><h1>why git?</h1>
 						<aside class="notes">
 							Most you have have probably heard of git, but if you haven't -
 							git is a version control tool. 
@@ -49,8 +49,22 @@
 						</aside>
 					</section>
 					<section>
+						<h3>Text files</h3>
+						<ul>
+							<li>Most of the files we work with are just text.</li>
+							<li>Programmers have already figured out how to collaborate with text files:
+								Version Control (e.g. git)!
+							</li>
+						</ul>
+					</section>
+					<section>
 						<h3>git is a supplement to your workflow</h3>
 						<aside class="notes">The first thing to understand is that git is a supplement to your current workflow. You can work the way you usually work, and all you have to do is use git every time you want to save your progress</aside>
+					</section>
+				</section>
+				<section data-transition="slide">
+					<section class="center" data-transition="slide">
+						<h1>workflow</h1>
 					</section>
 					<section>
 						<h3>Workflow</h3>
@@ -138,15 +152,13 @@
 						</aside>
 					</section>
 					<section>
-						<h1>Big idea #1</h1>
+						<h1>big idea #1</h1>
 						git history is a graph
 						<aside class="notes">
 							So that's big idea number 1, git history is a graph that you can traverse, allowing you to move to any "saved" state in a project
 						</aside>
 					</section>
-				</section>
 
-				<section data-transition="slide">
 					<section>
 						<h3>Workflow</h3>
 						<div style="text-align: center; width: 100%; display: inline-block" class="fragment" data-fragment-index="1"><code></code></div>
@@ -155,7 +167,7 @@
 						<div style="text-align: left; width: 45%; display: inline-block">Edit files</div>
 						<div style="text-align: center; width: 45%; display: inline-block" class="fragment" data-fragment-index="2"><code style="background-color: red; color: white; padding: .25em">$EDITOR</code></div>
 						<div style="text-align: center; width: 100%; display: inline-block"></div>
-						<div style="text-align: left; width: 45%; display: inline-block" class="fragment" data-fragment-index="0">Group changes</div>
+						<div style="text-align: left; width: 45%; display: inline-block" class="fragment" data-fragment-index="0">Add changes</div>
 						<div style="text-align: center; width: 45%; display: inline-block" class="fragment" data-fragment-index="3"><code style="background-color: black; color: white; border-radius: 5em; padding: .25em" >git add</code></div>
 						<div style="text-align: center; width: 100%; display: inline-block"></div>
 						<div style="text-align: left; width: 45%; display: inline-block" class="fragment" data-fragment-index="0">Review changes</div>
@@ -197,16 +209,11 @@
 							git does calculate a diff though, only when it needs to push. Again, this can be set manually. You can say - take longer than you usually do, but make me the smallest patch you can. 
 						</aside>
 					</section>
-
-					<section>
-						<h1>Big idea #2</h1>
-						Difference between Head, Index and Working directory
-						<br>
-						<a href="https://git-scm.com/blog/2011/07/11/reset.html" data-preview-link>Link</a>
-					</section>
 				</section>
 				<section data-transition="slide">
-					<section><h1>Branches</h1></section>
+					<section class="center">
+						<h1>branches</h1>
+					</section>
 					<section data-state="demo2-event" data-transition="none">
 						<h3><code>git branch master</code></h3>
 						<div class="fragment demo2-start" style="margin: 50px 0px;">
@@ -264,8 +271,9 @@
 						<h1>Big idea #3</h1>
 						branches are just labels
 					</section>
+					<!--
 					<section data-state="demo5-event" data-transition="none">
-						<h3><code>git rebase master</code></h3>
+						<h3>Advanced: <code>git rebase master</code></h3>
 						<div class="fragment demo5-start" style="margin: 50px 0px;">
 						</div>
 						<div class="fragment demo5-git-fetch" style="margin: 50px 0px;">
@@ -278,14 +286,38 @@
 							<svg id="demo5-chart"></svg>
 						</div>
 					</section>
+					-->
 				</section>
 
 				<section data-transition="slide">
-					<section><h1>Remote</h1></section>
+					<section class="center">
+						<h1>the remote</h1>
+						Collaborate with others.
+					</section>
+					<section>
+						<h3>Distributed Version Control</h3>
+						<ul>
+							<li>Everyone owns a full copy of the repository.</li>
+							<li>"The remote" is a special branch that tracks it's state.</li>
+						</ul>
+					</section>
+					<section data-transition="slide">
+						Download changes?
+						<h2><code>git pull</code></h2>
+					</section>
+					<section data-transition="slide">
+						Upload changes?
+						<h2><code>git push</code></h2>
+						<div class="fragment">
+							If the remote has changed, get the changes with <code>git pull</code> before pushing.
+						</div>
+						<aside class="notes">
+							The server may not know how to merge your changes.
+						</aside>
+					</section>
 					<section>
 						<img src="img/fetchpull.png" style="max-height: 15em;" alt="git operations">
 						<code>git pull = git fetch + git merge</code>
-						<aside class="notes">Everything we've seen so far has been local. </aside>
 					</section>
 					<section>
 						<h1>Big idea #5</h1>
@@ -295,8 +327,13 @@
 				</section>
 
 				<section data-transition="slide">
-					<section data-transition="slide">
-						<h1>Merge Conflict</h1>
+					<section class="center" data-transition="slide">
+						<h1>merge conflict</h1>
+						<p class="center">
+							<img src="img/dropbox-conflicts.jpg" style="height: 30vh;" />
+							<br />
+							Uh-oh
+						</p>
 					</section>
 
 					<section data-transition="slide">
@@ -324,22 +361,24 @@
 								</pre></code>
 							</div>
 						</div>
-						<code>git pull</code> gives a merge conflict!
-						<br />
-						<code>git status</code>:
-						<pre><code data-trim>
-						On branch master
-						You have unmerged paths.
-  					  	  (fix conflicts and run "git commit")
-  					  	  (use "git merge --abort" to abort the merge)
+						<div class="fragment">
+							<code>git pull</code> gives a merge conflict!
+							<br />
+							<code>git status</code>:
+							<pre><code data-trim>
+							On branch master
+							You have unmerged paths.
+  					  	  	  (fix conflicts and run "git commit")
+  					  	  	  (use "git merge --abort" to abort the merge)
 
-						Unmerged paths:
-  					  	  (use "git add &lt;file&gt;..." to mark resolution)
+							Unmerged paths:
+  					  	  	  (use "git add &lt;file&gt;..." to mark resolution)
 
-							both modified:   animals.md
+								both modified:   animals.md
 
-						no changes added to commit (use "git add" and/or "git commit -a")
-						</pre></code>
+							no changes added to commit (use "git add" and/or "git commit -a")
+							</pre></code>
+						</div>
 					</section>
 
 
@@ -372,260 +411,52 @@
 				</section>
 
 				<section data-transition="slide">
-					<section data-transition="slide">
+					<section class="center" data-transition="slide">
 						<h1>Review of big ideas</h1>
 					</section>
-					<section id="commit-related-changes" class="slide level2">
+					<section class="center" id="commit-related-changes" class="slide level2">
 						<h3>git history is a graph</h3>
 					</section>
-					<section id="commit-often" class="slide level2">
-						<h3>Difference between working directory, staging area and .git repository</h3>
-					</section>
-					<section id="branches-are-inexpensive" class="slide level2">
+					<section class="center" id="branches-are-inexpensive" class="slide level2">
 						<h3>Branches are just labels</h3>
 					</section>
-					<section id="commit-only-if-tests-pass" class="slide level2">
+					<section class="center" id="commit-only-if-tests-pass" class="slide level2">
 						<h3>Remote is a branch too</h3>
 					</section>
-					<section id="write-good-commit-messages" class="slide level2">
-						<h3>Local history is whatever you make it</h3>
+					<section class="center" id="write-good-commit-messages" class="slide level2">
+						<h3>Resolve conflicts</h3>
 					</section>
 				</section>
 
 				<section data-transition="slide">
-					<section data-transition="slide">
-						<h1>Best practices</h1>
-					</section>
-					<section id="commit-related-changes" class="slide level2">
-						<h3>Commit related changes</h3>
-					</section>
-					<section id="commit-often" class="slide level2">
-						<h3>Commit often</h3>
-					</section>
-					<section id="branches-are-inexpensive" class="slide level2">
-						<h3>Branches are inexpensive</h3>
-					</section>
-					<section id="commit-only-if-tests-pass" class="slide level2">
-						<h3>Push to master only if tests pass</h3>
-					</section>
-					<section id="write-good-commit-messages" class="slide level2">
-						<h3>Write good commit messages!</h3>
-					</section>
-					<section id="discuss-workflow-with-team" class="slide level2">
-						<h3>Discuss workflow with team</h3>
+					<section>
+						<h3>Cheat Sheet</h3>
+						<p>
+							Run "<code>git</code>" (or <code>git help &lt;command&gt;</code>)
+						</p>
 					</section>
 					<section>
-						<h3>Less of this and more of this</h3>
-						<p class="center" style="position: absolute">
-						<img src="img/git-history.png" alt="git-history">
-						</p>
-					</section>
-				</section>
-				<section>
-					<h3>Source code for this presentation</h3>
-					<p class="center">
-					<a href="https://github.com/kdheepak89/think-git"><img class="no-shadow" style="border-radius: 50px; max-height: 2em; margin-top: 5em;" src="https://assets-cdn.github.com/images/modules/logos_page/GitHub-Mark.png" alt="git-repo"></a>
-					</p>
-				</section>
-				<section>
-					<h3>Additional slides</h3>
-				</section>
-				<section>
-					<section class="titleslide slide level1" data-transition="slide"><h1>Advantages of git</h1></section>
-					<section id="section" class="slide level2">
-						<h1></h1>
+						<h3>Summarized cheat sheet</h3>
+						<code>git &lt;command&gt;</code> (or just run "<code>git</code>" for help):
 						<ul>
-							<li>Free </li>
-							<li>Fast </li>
-							<li>Secure </li>
-							<li>Supports multiple non linear workflows</li>
-							<li class="fragment current-visible"><b>Easy to learn</b></li>
+							<li><code>init</code>: Initialise git repo.</li>
+							<li><code>status</code>: Check status of repo. <em>Use often!</em></li>
+							<li><code>add</code>: Add a file to staging (before committing).</li>
+							<li><code>commit</code>: Create a commit with your changes</li>
+							<li><code>pull</code>: Pull changes from a remote repository.</li>
+							<li><code>push</code>: Push changes to a remote repository.</li>
+							<li><code>branch</code>: Create a branch.</li>
+							<li><code>merge</code>: Merge a branch.</li>
+							<li><code>checkout</code>: Switch to a branch.</li>
 						</ul>
-						<aside class="notes">
-							git is free, fast, secure and support different workflows.
-							Hit SPC
-							And most importantly it is easy to learn
-						</aside>
-					</section>
-					<section class="slide level2" >
-						<h3>Free as in [beer, speech]</h3>
-						<p class="center">
-						<br>
-						<img src="img/git-scm.png" style="max-height: 10em;"  alt="git-scm">
-						<br>
-						<a href="https://git-scm.com/" data-preview-link>Link</a>
-						</p>
-						<aside class="notes">
-							Free to download for Windows, OSX, Linux. Free to modify under the GNU General Public License version 2.
-						</aside>
-					</section>
-					<section>
-						<h3>Small</h3>
-						The Mozilla project's CVS repository is about 3 GB; it's about 12 GB in Subversion's fsfs format. In Git it's around 300 MB.
-						<aside class="notes">
-							git repositories are usually smaller than CVS repository for the same source code and history. git is efficient at storing content and changes in content.
-						</aside>
-					</section>
-					<section class="slide level2" >
-						<h3>Fast</h3>
-						<table width="100%">
-							<tbody>
-								<tr>
-								  	<td>
-										<img src="https://chart.googleapis.com/chart?chxt=x&amp;cht=bvs&amp;chl=git|svn&amp;chd=t:0.649,2.6&amp;chds=0,2.6&amp;chs=100x125&amp;chco=E09FA0|E05F49&amp;chf=bg,s,fcfcfa&amp;chtt=Commit A" alt="init benchmarks">
-								  	</td>
-								  	<td>
-										<img src="https://chart.googleapis.com/chart?chxt=x&amp;cht=bvs&amp;chl=git|svn&amp;chd=t:1.53,24.7&amp;chds=0,24.7&amp;chs=100x125&amp;chco=E09FA0|E05F49&amp;chf=bg,s,fcfcfa&amp;chtt=Commit B" alt="init benchmarks">
-								  	</td>
-								  	<td>
-										<img src="https://chart.googleapis.com/chart?chxt=x&amp;cht=bvs&amp;chl=git|svn&amp;chd=t:0.257,1.09&amp;chds=0,1.09&amp;chs=100x125&amp;chco=E09FA0|E05F49&amp;chf=bg,s,fcfcfa&amp;chtt=Diff Curr" alt="init benchmarks">
-								  	</td>
-								  	<td>
-										<img src="https://chart.googleapis.com/chart?chxt=x&amp;cht=bvs&amp;chl=git|svn&amp;chd=t:0.248,3.99&amp;chds=0,3.99&amp;chs=100x125&amp;chco=E09FA0|E05F49&amp;chf=bg,s,fcfcfa&amp;chtt=Diff Rec" alt="init benchmarks">
-								  	</td>
-								  	<td>
-										<img src="https://chart.googleapis.com/chart?chxt=x&amp;cht=bvs&amp;chl=git|svn&amp;chd=t:1.17,83.57&amp;chds=0,83.57&amp;chs=100x125&amp;chco=E09FA0|E05F49&amp;chf=bg,s,fcfcfa&amp;chtt=Diff Tags" alt="init benchmarks">
-								  	</td>
-								  	<td>
-										<img src="https://chart.googleapis.com/chart?chxt=x&amp;cht=bvs&amp;chl=git*|git|svn&amp;chd=t:21.0,107.5,14.0&amp;chds=0,107.5&amp;chs=100x125&amp;chco=E09FA0|E09FA0|E05F49&amp;chf=bg,s,fcfcfa&amp;chtt=Clone" alt="init benchmarks">
-								  	</td>
-								</tr>
-								<tr>
-								  	<td>
-										<img src="https://chart.googleapis.com/chart?chxt=x&amp;cht=bvs&amp;chl=git|svn&amp;chd=t:0.012,0.381&amp;chds=0,0.381&amp;chs=100x125&amp;chco=E09FA0|E05F49&amp;chf=bg,s,fcfcfa&amp;chtt=Log (50)" alt="init benchmarks">
-								  	</td>
-								  	<td>
-										<img src="https://chart.googleapis.com/chart?chxt=x&amp;cht=bvs&amp;chl=git|svn&amp;chd=t:0.519,169.197&amp;chds=0,169.197&amp;chs=100x125&amp;chco=E09FA0|E05F49&amp;chf=bg,s,fcfcfa&amp;chtt=Log (All)" alt="init benchmarks">
-								  	</td>
-								  	<td>
-										<img src="https://chart.googleapis.com/chart?chxt=x&amp;cht=bvs&amp;chl=git|svn&amp;chd=t:0.601,82.843&amp;chds=0,82.843&amp;chs=100x125&amp;chco=E09FA0|E05F49&amp;chf=bg,s,fcfcfa&amp;chtt=Log (File)" alt="init benchmarks">
-								  	</td>
-								  	<td>
-										<img src="https://chart.googleapis.com/chart?chxt=x&amp;cht=bvs&amp;chl=git|svn&amp;chd=t:0.896,2.816&amp;chds=0,2.816&amp;chs=100x125&amp;chco=E09FA0|E05F49&amp;chf=bg,s,fcfcfa&amp;chtt=Update" alt="init benchmarks">
-								  	</td>
-								  	<td>
-										<img src="https://chart.googleapis.com/chart?chxt=x&amp;cht=bvs&amp;chl=git|svn&amp;chd=t:1.91,3.04&amp;chds=0,3.04&amp;chs=100x125&amp;chco=E09FA0|E05F49&amp;chf=bg,s,fcfcfa&amp;chtt=Blame" alt="init benchmarks">
-								  	</td>
-								  	<td>
-										<img src="https://chart.googleapis.com/chart?chxt=x&amp;cht=bvs&amp;chl=git|svn&amp;chd=t:181,132&amp;chds=0,181&amp;chs=100x125&amp;chco=E09FA0|E05F49&amp;chf=bg,s,fcfcfa&amp;chtt=Size" alt="init benchmarks">
-								  	</td>
-								</tr>
-							</tbody>
-						</table>
-						<br>
-						<a href="https://git-scm.com/about/small-and-fast" data-preview-link>Link</a>
-						<aside class="notes">
-							git repositories are fast. Table above shows some comparisons of svn vs git. svn requires a central repository to operate, whereas git is entirely local. This means no network latencies. This also means a few other things, the entire project is on your local machine i.e. EVERYONE that has cloned the repository has the entire history of the project on their machine as well. Distributed backup. 
-						</aside>
-					</section>
-					<section data-transition="none">
-						<h3>Distributed non linear workflows</h3>
-						<p class="center" style="position: absolute">
-						Subversion-Style Workflow
-						<img src="https://git-scm.com/images/about/workflow-a@2x.png"  style="max-height: 10em;"  alt="Workflow A">
-						<br>
-						<a href="https://git-scm.com/about/distributed" data-preview-link>Link</a>
-						</p>
-						<aside class="notes">
-							git allows you to use it the way you want. You can use it exactly like how you would svn.
-						</aside>
-					</section>
-					<section data-transition="none">
-						<h3>Distributed non linear workflows</h3>
-						<p class="center" style="position: absolute">
-						Integration Manager Workflow
-						<img src="https://git-scm.com/images/about/workflow-b@2x.png"  style="max-height: 10em;"  alt="Workflow B">
-						<br>
-						<a href="https://git-scm.com/about/distributed" data-preview-link>Link</a>
-						</p>
-						<aside class="notes">
-							git also allows you to pick and compile specific changes from anyone else that has made their repository public 
-						</aside>
-					</section>
-					<section data-transition="none">
-						<h3>Distributed non linear workflows</h3>
-						<p class="center" style="position: absolute">
-						Dictator and Lieutenants Workflow
-						<img src="https://git-scm.com/images/about/workflow-c@2x.png"  style="max-height: 10em;"  alt="Workflow C">
-						<br>
-						<a href="https://git-scm.com/about/distributed" data-preview-link>Link</a>
-						</p>
-						<aside class="notes">
-							Workflow followed by Linux devs, where Linus has a repository on his local machine that no one else has access to.
-						</aside>
-					</section>
-					<section id="section-2" class="slide level2">
-						<h1></h1>
-						<ul>
-							<li>git is not GitHub</li>
-							<li>git is not Dropbox</li>
-							<li>git is not svn</li>
-						</ul>
-						<aside class="notes">
-							git is different from GitHub. GitHub a web service that host a public free remote copy of your repository. git is the toolkit that builds the repository. They are not the same, and there are loads of other places you can store your code remotely - gitlab, bitbucket etc. Why, you can even set up a computer in your home to act as a remote git server. 
-							git is not Dropbox, and although it can be used for sharing word documents and pdfs, this may not be such a good idea - this will not scale well. git works best for text files. 
-						</aside>
-					</section>
-					<section id="cvs" class="slide level2">
-						<h3>CVS</h3>
-						<figure>
-							<img src="https://git-scm.com/book/en/v2/book/01-introduction/images/deltas.png"  style="max-height: 10em;"  alt="" />
-						</figure>
-						<aside class="notes">
-							SVN stores differences in the form of deltas. 
-						</aside>
-					</section>
-					<section id="git" class="slide level2">
-						<h3>Git</h3>
-						<figure>
-							<img src="https://git-scm.com/book/en/v2/book/01-introduction/images/snapshots.png"  style="max-height: 10em;"	alt="" />
-						</figure>
-						<aside class="notes">
-							git however, stores snapshots. People often assume that git stores the differences between files, but that is not true. git tracks content and not files. The way git wins, is by reusing the same "blob" in different snapshots if the file has not changed. 
-						</aside>
 					</section>
 				</section>
 
-				<section>
-					<section id="a-brief-history-of-git" class="titleslide slide level1" data-transition="slide">
-						<h1>A brief history of Git</h1>
-					</section>
-					<section id="section-1" class="slide level2">
-						<ul>
-							<li><code>git</code> is British English slang for &quot;unpleasant person&quot;.</li>
-							<p style="text-indent: 2em;"> - Linus Torvalds likes to name projects after himself</p>
-						</ul>
-					</section>
-					<section id="section" class="slide level2">
-						<p class="center">
-						The Parable by Tom Preston-Werner (Founder of GitHub)
-						<br>
-						<img src="img/git-parable.png" alt="The Git Parable">
-						<br>
-						<a href="http://tom.preston-werner.com/2009/05/19/the-git-parable.html" data-preview-link>Link</a>
-						</p>
-						<aside class="notes">
-							This article goes through the steps one may attempt to create a version control system. In this hypothetical scenario one may start off by creating multiple folders as a backup. The final VCS that is arrived at is very similar to git. The author is the founder of GitHub
-						</aside>
-					</section>
-					<section class="slide level2">
-						<p class="center">
-						<code>git blame README</code>
-						<img src="img/git-readme.png" style="max-height: 15em;" alt="git readme">
-						<br>
-						<a href="https://github.com/git/git/blame/master/README" data-preview-link>Link</a>
-						</p>
-					</section>
-					<section class="slide level2">
-						<p class="center">
-						<img src="img/git-2005-article.png" style="max-height: 15em;" alt="Article on Git in 2005">
-						<br>
-						<a href="http://www.pcworld.idg.com.au/article/129776/after_controversy_torvalds_begins_work_git_/" data-preview-link>Link</a>
-						</p>
-						<aside class="notes">
-							Linus on why he created git
-						</aside>
-					</section>
+				<section class="center" data-transition="slide">
+					<h3>Source code for this presentation</h3>
+					<p class="center">
+					<a href="https://github.com/eddieschoute/git-basics"><img class="no-shadow" style="border-radius: 50px; max-height: 2em; margin-top: 5em;" src="https://assets-cdn.github.com/images/modules/logos_page/GitHub-Mark.png" alt="git-repo"></a>
+					</p>
 				</section>
 			</div>
 		</div>
