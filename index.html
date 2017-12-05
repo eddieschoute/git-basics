@@ -5,6 +5,8 @@
 		<link rel="stylesheet" href="reveal.js/css/reveal.css">
 		<link rel="stylesheet" href="reveal.js/css/theme/simple.css">
 		<link rel="stylesheet" href="css/custom.css">
+		<!-- For syntax highlighting -->
+		<link rel="stylesheet" href="css/monokai.css"/>
 		<!-- d3.js -->
 		<script src='https://d3js.org/d3.v3.min.js'></script>
 		<!-- gitgraph.js -->
@@ -297,19 +299,19 @@
 					<section>
 						<h2>Go back in time!</h2>
 						Find a commit you wanna go back to with <div style="text-align: center; width: 70%; display: inline-block"><code style="background-color: black; color: white; border-radius: 5em; padding: .25em" >git log</code></div>
-						<pre><code data-trim>
-						commit c0f3b38e959fbd43888ffb0aed52289f0a0fd132 (HEAD -> gh-pages, origin/gh-pages, origin/HEAD)
-						Author: Eddie Schoute &lt;censored@gmail.com&gt;
-						Date:   Wed Nov 29 12:50:11 2017 -0500
+<pre><code data-trim>
+commit c0f3b38e959fbd43888ffb0aed52289f0a0fd132 (HEAD -> gh-pages, origin/gh-pages, origin/HEAD)
+Author: Eddie Schoute &lt;censored@gmail.com&gt;
+Date:   Wed Nov 29 12:50:11 2017 -0500
 
-    					Added .gitignore
+	Added .gitignore
 
-						commit c0fvev3df94c763d23ec8d41b37a0e9e7e7ef39f
-						Author: Eddie Schoute &lt;...@gmail.com&gt;
-						Date:   Wed Nov 29 12:49:30 2017 -0500
+commit c0fvev3df94c763d23ec8d41b37a0e9e7e7ef39f
+Author: Eddie Schoute &lt;...@gmail.com&gt;
+Date:   Wed Nov 29 12:49:30 2017 -0500
 
-    					Added slides for newlines and diff.
-    					</code></pre>
+	Added slides for newlines and diff.
+</code></pre>
     					<div class="fragment">
 						then <div style="text-align: center; width: 70%; display: inline-block"><code style="background-color: black; color: white; border-radius: 5em; padding: .25em" >git checkout c0fvev3</code></div> (partial matches are OK)
 						</div>
@@ -427,7 +429,7 @@
 					<section data-transition="slide">
 						<span>
 							<code>animals.md</code>:
-							<pre><code data-trim>
+							<pre><code data-trim class="diff">
 							# Favorite Animal
 							Horse
 							&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD
@@ -439,7 +441,7 @@
 						</span>
 						<span class="fragment">
 							Use your editor and fix manually:
-							<pre><code data-trim>
+							<pre><code data-trim class="markdown">
 							# Favorite Animal
 							Horse
 							Dolphin
