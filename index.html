@@ -228,7 +228,7 @@
 						<h2>Find who is to blame!</h2>
 						<code style="background-color: black; color: white; border-radius: 5em; padding: .25em">git blame</code>
 						<img src="img/gitbasics-blame.png" />
-					</section>	
+					</section>
 				</section>
 				<section data-transition="slide">
 					<section class="center">
@@ -289,6 +289,30 @@
 					</section>
 					<section class="center">
 						<h2>branches are just labels</h2>
+					</section>
+					<section>
+						<h2>Go back in time!</h2>	
+						<img src="img/urgent_mission.png" />
+					</section>
+					<section>
+						<h2>Go back in time!</h2>
+						Find a commit you wanna go back to with <div style="text-align: center; width: 70%; display: inline-block"><code style="background-color: black; color: white; border-radius: 5em; padding: .25em" >git log</code></div>
+						<pre><code data-trim>
+						commit c0f3b38e959fbd43888ffb0aed52289f0a0fd132 (HEAD -> gh-pages, origin/gh-pages, origin/HEAD)
+						Author: Eddie Schoute &lt;censored@gmail.com&gt;
+						Date:   Wed Nov 29 12:50:11 2017 -0500
+
+    					Added .gitignore
+
+						commit c0fvev3df94c763d23ec8d41b37a0e9e7e7ef39f
+						Author: Eddie Schoute &lt;...@gmail.com&gt;
+						Date:   Wed Nov 29 12:49:30 2017 -0500
+
+    					Added slides for newlines and diff.
+    					</code></pre>
+    					<div class="fragment">
+						then <div style="text-align: center; width: 70%; display: inline-block"><code style="background-color: black; color: white; border-radius: 5em; padding: .25em" >git checkout c0fvev3</code></div> (partial matches are OK)
+						</div>
 					</section>
 					<!--
 					<section data-state="demo5-event" data-transition="none">
@@ -364,7 +388,7 @@
 						<div class="container">
 							<div class="col">
 								Remote <code>animals.md</code>:
-								<pre><code data-trim>
+								<pre><code data-trim class="markdown">
 								# Favorite animal
 								Horse
 								Dolphin
@@ -372,7 +396,7 @@
 							</div>
 							<div class="col">
 								Local <code>animals.md</code>:
-								<pre><code data-trim>
+								<pre><code data-trim class="markdown">
 								# Favorite animal
 								Horse
 								Chicken
@@ -383,7 +407,7 @@
 							<code>git pull</code> gives a merge conflict!
 							<br />
 							<code>git status</code>:
-							<pre><code data-trim>
+							<pre><code data-trim class="markdown">
 							On branch master
 							You have unmerged paths.
   					  	  	  (fix conflicts and run "git commit")
